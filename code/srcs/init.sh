@@ -33,4 +33,5 @@ mv localhost.dev.key /etc/ssl/private/
 chmod 600 etc/ssl/certs/localhost.dev.crt etc/ssl/private/localhost.dev.key
 
 service php7.3-fpm start
-nginx -g "daemon off;"
+service nginx start
+bash
