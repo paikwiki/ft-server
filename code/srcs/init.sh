@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT_DIR="/var/www/wordpress"
+ROOT_DIR="/var/www/localhost"
 
 service mysql start
 
