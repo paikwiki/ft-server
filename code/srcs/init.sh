@@ -24,5 +24,13 @@ tar -xvf wordpress-5.5.1.tar.gz
 mv -f wordpress ${ROOT_DIR}/wordpress
 mv /var/wp-config.php ${ROOT_DIR}/wordpress/
 
+openssl req -newkey rsa:4096 -sha256 -days 365 -nodes -x509 \
+			-subj "/C=KR/ST=Seoul/L=Seoul/O=42Seoul/OU=cbaek/CN=localhost" \
+			-out localhost.dev.crt \
+			-keyout localhost.dev.key
+mv localhost.dev.crt /etc/ssl/certs/
+mv localhost.dev.key /etc/ssl/private/
+chmod 600 etc/ssl/certs/localhost.dev.crt etc/ssl/private/localhost.dev.key
+
 service php7.3-fpm start
 nginx -g "daemon off;"

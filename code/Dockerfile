@@ -7,11 +7,14 @@ RUN     apt-get install -y nginx \
 		php \
         php-fpm \
         php-cli \
-        php-mysql
+        php-mysql \
+        openssl \
+        vim
 
 COPY    srcs/nginx.conf /etc/nginx/sites-enabled/
 
 RUN     mkdir /var/www/localhost
+RUN     mkdir /etc/nginx/ssl
 COPY    srcs/init.sh ./
 COPY    srcs/phpMyAdmin-4.9.5-english.tar.gz ./
 COPY    srcs/config.inc.php /var/
