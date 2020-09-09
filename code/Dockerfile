@@ -21,6 +21,6 @@ COPY    srcs/config.inc.php /var/
 COPY    srcs/wp-config.php /var/
 COPY    srcs/wordpress-5.5.1.tar.gz ./
 
-EXPOSE  80
+EXPOSE  80 443
 
 CMD     [ "/bin/bash", "init.sh" ]
