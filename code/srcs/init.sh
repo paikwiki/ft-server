@@ -20,5 +20,9 @@ tar -xvf phpMyAdmin-4.9.5-english.tar.gz
 mv -f phpMyAdmin-4.9.5-english ${ROOT_DIR}/phpmyadmin
 mv /var/config.inc.php ${ROOT_DIR}/phpmyadmin/
 
+tar -xvf wordpress-5.5.1.tar.gz
+mv -f wordpress ${ROOT_DIR}/wordpress
+mv /var/wp-config.php ${ROOT_DIR}/wordpress/
+
 service php7.3-fpm start
 nginx -g "daemon off;"
