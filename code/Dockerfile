@@ -11,7 +11,7 @@ RUN     apt-get install -y nginx \
         openssl \
         vim
 
-COPY    srcs/nginx.conf /etc/nginx/sites-enabled/
+COPY    srcs/localhost.conf /etc/nginx/sites-enabled/
 
 RUN     mkdir /var/www/localhost
 RUN     mkdir /etc/nginx/ssl
