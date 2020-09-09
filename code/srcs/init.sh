@@ -14,5 +14,9 @@ echo "GRANT ALL PRIVILEGES ON wordpress.* to 'root'@'localhost';" \
 echo "FLUSH PRIVILEGES" \
 		| mysql -u root --skip-password
 
+tar -xvf phpMyAdmin-4.9.5-english.tar.gz
+mv -f phpMyAdmin-4.9.5-english /var/www/html/phpmyadmin
+mv /var/config.inc.php /var/www/html/phpmyadmin/
+
 service php7.3-fpm start
 nginx -g 'daemon off;'

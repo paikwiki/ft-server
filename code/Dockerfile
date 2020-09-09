@@ -14,5 +14,6 @@ EXPOSE  80
 COPY    srcs/nginx.conf /etc/nginx/sites-enabled/
 COPY    srcs/index.php /var/www/html/
 COPY    srcs/init.sh ./
-
+COPY    srcs/phpMyAdmin-4.9.5-english.tar.gz ./
+COPY    srcs/config.inc.php /var/
 CMD     [ "/bin/bash", "init.sh" ]
